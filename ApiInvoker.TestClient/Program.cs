@@ -22,7 +22,7 @@ namespace ApiInvoker.TestClient
 
             // it's a console app, so we're running these calls synchrously 
 
-            #region Gets
+            #region GETs
 
             Console.WriteLine("GET - Parameterless - GetProducts:");
             Dump( api.GetProducts() );
@@ -38,7 +38,7 @@ namespace ApiInvoker.TestClient
 
             #endregion
 
-            #region Posts
+            #region POSTs
 
             var corn = new Product { Name = "Corn", Description = "Unshucked", Active = true };
 
@@ -53,7 +53,7 @@ namespace ApiInvoker.TestClient
 
             #endregion
 
-            #region PUT
+            #region PUTs
 
             var parsnip = api.GetProduct(3);
             parsnip.Description = "They're great!";
@@ -66,7 +66,7 @@ namespace ApiInvoker.TestClient
 
             #endregion
 
-            #region Deletes
+            #region DELETEs
 
             Console.WriteLine("DELETE - Parameterless - RemoveAll:");
             Dump(api.RemoveAll());
